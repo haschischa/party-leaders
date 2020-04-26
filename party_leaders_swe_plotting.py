@@ -1,5 +1,6 @@
 import plotly.express as px
 import plotly.graph_objects as go
+import plotly.io as pio
 
 import pandas as pd
 import numpy as np
@@ -100,3 +101,6 @@ fig.update_traces(marker=dict(size=15,
                   )
 
 fig.show()
+
+# html-code creation to be able to host on GitHub
+pio.write_html(fig, file='index.html', auto_open=True)
